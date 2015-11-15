@@ -21,4 +21,8 @@ public class StudentController {
 		sorter.setRowFilter(filter);
 		table.setRowSorter(sorter);
 	}
+
+	public static void colorStudent(JTable table){
+
+	}
 }

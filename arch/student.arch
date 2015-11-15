@@ -4,8 +4,9 @@ interface component Main{
 
 interface component StudentController{
 	void filterStudent(JTable table);
+	void colorStudent(JTable table);
 }
 
-interface connector cStudent{
-	Main = (Main.actionPerformed -> StudentController.filterStudent -> Main);
+uncertain connector ucStudent extends Main{
+	u Student = (Main.actionPerformed -> {StudentController.filterStudent, StudentController.colorStudent} -> Main);
 }
