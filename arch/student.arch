@@ -1,0 +1,7 @@
+interface component Main{
+	void actionPerformed(ActionEvent e);
+}
+
+interface component StudentController{
+	void filterStudent(JTable table);
+}
