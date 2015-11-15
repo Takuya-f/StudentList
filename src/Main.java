@@ -59,7 +59,7 @@ public class Main extends JFrame implements ActionListener{
 		Container container = mainFrame.getContentPane();
 		JTable table = (JTable) ((JPanel)container.getComponent(0)).getComponent(1);
 		// filter Students
-		StudentController.filterStudent(table);
+		StudentController.colorStudent(table);
 	}
 
 }

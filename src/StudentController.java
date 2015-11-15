@@ -23,6 +23,7 @@ public class StudentController {
 	}
 
 	public static void colorStudent(JTable table){
-
+		table.setDefaultRenderer(Object.class, new StudentTableCellRender());
+		table.repaint();
 	}
 }
