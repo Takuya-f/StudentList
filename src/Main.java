@@ -7,6 +7,8 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableModel;
 
 public class Main extends JFrame implements ActionListener{
 
@@ -34,7 +36,17 @@ public class Main extends JFrame implements ActionListener{
 			tableData[i] = studentData[i].getTableData();
 		}
 
-		JTable table = new JTable(this.tableData, this.columnName);
+		TableModel model = new DefaultTableModel(tableData, columnName){
+			private static final long serialVersionUID = -7956029302838217952L;
+
+			@Override
+			public boolean isCellEditable(int row, int column) {
+				// TODO Auto-generated method stub
+				return false;
+			}
+		};
+
+		JTable table = new JTable(model);
 
 		JButton button = new JButton("授業取得者のみに絞り込む");
 		button.addActionListener(this);
