@@ -25,6 +25,7 @@ public class StudentTableCellRender extends DefaultTableCellRenderer {
 		}else{
 			this.setBackground(Color.WHITE);
 		}
+		this.setForeground(Color.BLACK);
 
 		return this;
 	}
